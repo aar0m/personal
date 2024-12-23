@@ -1,0 +1,73 @@
+header {
+    margin: 0;
+    padding: 10;
+
+    font-size: 24px;
+    text-align: right;
+}
+
+header:hover{
+    color: black;
+    background-color: white;
+}
+
+.hero-sect {
+    background-image: url(/images/hero-back.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+    font-size: calc(36px + 8vw);
+    text-align: center;
+}
+
+h1.title-top {
+    margin-top: 0px;
+    padding-top: calc(100px + 6vw);
+    margin-bottom: calc(-36px - 8vw);
+}
+
+h1.title-bottom {
+    margin-bottom: calc(-20px - 1vw);
+}
+
+h1.subtitle {
+    font-size: 1.25rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: auto;
+    padding-bottom: calc(100px + 6vw);
+}
+
+h2 {
+    font-family: Garamond, 'Georgia', serif;
+    font-weight: 100;
+    font-size: 30px;
+}
+
+a:link {
+    text-decoration: none;
+    color:  whitesmoke;
+    
+}
+
+a:hover {
+    font-weight: 500;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    
+    background-color: rgb(7, 7, 10);
+    color: whitesmoke;
+}
