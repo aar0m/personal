@@ -1,2 +1,3 @@
-# Portfolio to Highlight Personal Projects and Learn Front-End Development
+# Personal Portfolio 
+This is to highlight personal projects and learn front-end development. Also an alternative creative outlet.
 Hosted at: https://aar0m.github.io/portfolio/

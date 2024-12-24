@@ -1,16 +1,61 @@
-header {
-    margin: 0;
-    padding: 10;
-
-    font-size: 24px;
-    text-align: right;
+/*//////////////// NAV BAR ///////////////////////*/
+.navdiv {
+    background-color: rgb(7, 7, 10);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
 }
 
-header:hover{
-    color: black;
-    background-color: white;
+.logo {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 24px;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25vw);
 }
 
+.logo:hover {
+    font-size: 1.2rem;
+    font-weight: bolder;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+
+}
+
+li a{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25vw);
+    color:white;
+    background-attachment: fixed;
+    margin-left: 24px;
+    margin-right: 24px;
+
+    @media (width < 960px) {
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-right: 5px;
+    }
+}
+
+li a:hover {
+    font-size: 1.2rem;
+    font-weight: bolder;
+
+    @media (width < 960px) {
+        font-weight: bolder;
+        font-size: 1rem;
+    }
+
+    @media (width < 400px) {
+        font-weight: 300;
+        font-size: 1rem;
+    }
+}
+
+/*//////////////// HERO PAGE ///////////////////////*/
 .hero-sect {
     background-image: url('../images/hero-back.png');
     background-attachment: fixed;
@@ -33,10 +78,14 @@ h1.title-top {
     margin-top: 0px;
     padding-top: calc(100px + 6vw);
     margin-bottom: calc(-36px - 8vw);
+
+    @media (width < 960px) {
+        padding-top: calc(125px + 6vw);
+    }
 }
 
 h1.title-bottom {
-    margin-bottom: calc(-20px - 1vw);
+    margin-bottom: calc(-10px - 0.8vw);
 }
 
 h1.subtitle {
@@ -46,20 +95,33 @@ h1.subtitle {
     padding-bottom: calc(100px + 6vw);
 }
 
+
+/*//////////////// BODY SECTION ///////////////////////*/
+.divide-bar {
+    padding: calc(12px + 1vw);
+    background-color: whitesmoke;
+
+}
+
 h2 {
-    font-family: Garamond, 'Georgia', serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 100;
-    font-size: 30px;
+    font-size: calc(36px + 1.5vw);
+
+    
+    margin-bottom: calc(24px - 1.25vw);
+    padding-left: calc(12px + 2vw);
+
 }
 
 a:link {
     text-decoration: none;
     color:  whitesmoke;
-    
 }
 
-a:hover {
-    font-weight: 500;
+a:visited {
+    text-emphasis: none;
+    color: whitesmoke;
 }
 
 body {
@@ -67,7 +129,70 @@ body {
     padding: 0;
     border: 0;
     width: 100%;
-    
+    height: 100%;
+
     background-color: rgb(7, 7, 10);
     color: whitesmoke;
+}
+
+p {
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25vw);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flow-root;
+    padding-right: 10%;
+    padding-left: 3%;
+
+    @media (width < 960px) {
+        padding-left: calc(12px + 2vw);
+        padding-right: calc(24px + 2vw);
+    }
+}
+
+/*//////////////// IMAGES SECTION ///////////////////////*/
+.korea-trip {
+    max-width: 40%;
+    height: auto;
+    float: left;
+    margin: 24px;
+    padding-top: 24px;
+    padding-left: 9.5%;
+    padding-right: 2.5%;
+    
+    @media (width <= 1440px) {
+        max-width: 45%;
+        padding-left: 8%;
+        padding-top: calc(24px + 5%);
+    }
+
+    @media (width < 960px) {
+        max-width: 100%;
+        margin-left: 0;
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+}
+
+
+/*//////////////// ABOUT SECTION ///////////////////////*/
+.about-sect {
+    color: rgb(7, 7, 10);
+    padding-top: 24px;
+    padding-bottom: 3vw;
+
+    text-align: left;
+    background-color: whitesmoke;
+}
+
+p.about-text {
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25vw);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flow-root;
+    padding-right: 10%;
+    padding-left: 0;
+
+    @media (width < 960px) {
+        padding-left: calc(12px + 2vw);
+        padding-right: calc(24px + 2vw);
+    }
 }
