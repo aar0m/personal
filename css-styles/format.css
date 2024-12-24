@@ -22,7 +22,6 @@
 li {
     list-style: none;
     display: inline-block;
-
 }
 
 li a{
@@ -62,7 +61,6 @@ li a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     width: 100%;
     height: 100%;
 }
@@ -100,18 +98,14 @@ h1.subtitle {
 .divide-bar {
     padding: calc(12px + 1vw);
     background-color: whitesmoke;
-
 }
 
 h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 100;
-    font-size: calc(36px + 1.5vw);
-
-    
+    font-size: calc(36px + 1.5vw); 
     margin-bottom: calc(24px - 1.25vw);
     padding-left: calc(12px + 2vw);
-
 }
 
 a:link {
@@ -130,7 +124,6 @@ body {
     border: 0;
     width: 100%;
     height: 100%;
-
     background-color: rgb(7, 7, 10);
     color: whitesmoke;
 }
@@ -170,7 +163,6 @@ p {
         padding-left: 0;
         padding-top: 0;
     }
-
 }
 
 
@@ -179,7 +171,6 @@ p {
     color: rgb(7, 7, 10);
     padding-top: 24px;
     padding-bottom: 3vw;
-
     text-align: left;
     background-color: whitesmoke;
 }
