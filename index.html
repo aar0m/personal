@@ -69,18 +69,48 @@
 
     <div id="experience" class="exp-sect">
         <h2 class="exp-title">Experience</h2>
-        <p class="exp-txt">
+        <p class="exp-desc">
             Highlights of my life and my work experience over the years—both voluntary and paid positions.
         </p>
-        <div class="exp-radio">
-            <label class="exp-button"><input type="radio" name="year" value="2024" checked><span class="checkmarked"></span></label>
-            <label for="2024">2024</label>
-            <label class="exp-button"><input type="radio" name="year" value="2023"><span class="checkmarked"></span></label>
-            <label for="2023">2023</label>
-            <label class="exp-button"><input type="radio" name="year" value="2022"><span class="checkmarked"></span></label>
-            <label for="2022">2022</label>
-            <label class="exp-button"><input type="radio" name="year" value="2021"><span class="checkmarked"></span></label>
-            <label for="2021">2021</label>
+        <div class="exp-content">
+            <div class="exp-radio">
+                <label class="exp-button"><input type="radio" name="year" value="2024" 
+                onclick="swapDiv(3)"><span class="checkmarked"></span></label>
+                <label for="2024">2024</label>
+
+                <label class="exp-button"><input type="radio" name="year" value="2023"
+                onclick="swapDiv(2)"><span class="checkmarked"></span></label>
+                <label for="2023">2023</label>
+
+                <label class="exp-button"><input type="radio" name="year" value="2022"
+                onclick="swapDiv(1)"><span class="checkmarked"></span></label>
+                <label for="2022">2022</label>
+
+                <label class="exp-button"><input type="radio" name="year" value="2021"
+                onclick="swapDiv(0)"><span class="checkmarked"></span></label>
+                <label for="2021">2021</label>
+            </div>
+
+            <div class="exp-txt-container">
+                <div class="exp-txt" id="2024">
+                    2024
+                </div>
+
+                <div class="exp-txt" id="2023">
+                    2023
+                </div>
+
+                <div class="exp-txt" id="2022">
+                    2022
+                </div>
+
+                <div class="exp-txt" id="2021">
+                    2021
+                </div>
+            </div>
+
+            <script src="script.js"></script>
+            </div>
         </div>
     </div>
 
