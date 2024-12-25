@@ -11,18 +11,24 @@
 <nav class="navbar">
     <div class="navdiv"> 
     <div class="logo"><a href="#">Home</a></div>
-    <ul class="right-nav">
+    <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#projects">Projects</a>
+            <ul class="dropdown">
+                <li class="top-link"><a href="https://www.behance.net/aar0nramos">GFX</a></li>
+                <li><a href="https://aar0m.github.io/portfolio/projects.html">Programming</a></li>
+            </ul>
+        </li>
+        <li><a href="#contact" class="last-nav">Contact</a></li>
+        </ul>
     </div>
 </nav>
     
 <div class="hero-sect">
     <h1 class="title-top">AARON</h1>
     <h1 class="title-bottom">RAMOS</h1>
-    <h1 class="subtitle"> Professional Portfolio | ramosaaron2@gmail.com</h1>
+    <h1 class="subtitle"> Personal Portfolio | ramosaaron2@gmail.com</h1>
 </div>
 
 <div class="divide-bar"></div>
@@ -32,9 +38,9 @@
             alt="A picture from when I visited Korea in 2023!"
             width="4034" height="3024">
             
-    <div class="about-sect" style="vertical-align: middle;" id="about">
-        <h2>About Me</h2>
-        <p class="about-text"> Welcome to my portfolio! I'm privileged enough to be a creative 
+    <div id="about" class="about-sect">
+        <h2 class="abt-title">About Me</h2>
+        <p class="about-txt"> Welcome to my portfolio! I'm privileged enough to be a creative 
             <span style="font-weight: bolder;">and</span> a computer engineering 
             student, so that I can at least <em>try</em> to make my ideas come to life.
             I was born in the Philippines and moved to Hawaiʻi at a young age. From the 
@@ -42,7 +48,7 @@
             I remember being around computers and tech for as long as I can remember.
         </p>
 
-        <p class="about-text">
+        <p class="about-txt">
             Besides studying or working on personal projects, I enjoy a fair amount of 
             drawing, exercise, and graphic design. I also very much love collaborating 
             with others and learning new perspectives, which is why I'm passionate
@@ -51,9 +57,9 @@
             learn/improve without taking myself too seriously.
         </p>
 
-        <p class="about-text"> I'm an avid user of <span style="font-weight: bold;">Adobe Photoshop</span> for 
+        <p class="about-txt"> I'm an avid user of <span style="font-weight: bold;">Adobe Photoshop</span> for 
             graphic design and illustration. Familiar with <span style="font-weight: bold;">
-            Python, POSIX C, C++,</span> and <span style="font-weight: bold;">HTML</span>. 
+            Python, POSIX C, C++, CSS</span> and <span style="font-weight: bold;">HTML</span>. 
             Well-versed in certain Google services (<span style="font-weight: bold;">Docs,
             Sheets, Slides</span>) and Microsoft products (<span style="font-weight: bold;">Word, 
             Excel</span>), with amateur experience in <span style="font-weight: bold;">LaTeX</span>.</p>
@@ -61,14 +67,41 @@
 
     <div class="divide-bar"></div>
 
-    <div id="experience">
-        <h2>Experience</h2>
-        <p>Lorem ipsum</p>
+    <div id="experience" class="exp-sect">
+        <h2 class="exp-title">Experience</h2>
+        <p class="exp-txt">
+            Highlights of my life and my work experience over the years—both voluntary and paid positions.
+        </p>
+        <div class="exp-radio">
+            <label class="exp-button"><input type="radio" name="year" value="2024" checked><span class="checkmarked"></span></label>
+            <label for="2024">2024</label>
+            <label class="exp-button"><input type="radio" name="year" value="2023"><span class="checkmarked"></span></label>
+            <label for="2023">2023</label>
+            <label class="exp-button"><input type="radio" name="year" value="2022"><span class="checkmarked"></span></label>
+            <label for="2022">2022</label>
+            <label class="exp-button"><input type="radio" name="year" value="2021"><span class="checkmarked"></span></label>
+            <label for="2021">2021</label>
+        </div>
     </div>
 
-    <div id="projects">
-        <h2><a href="projects.html" > Projects </a> </h2>
-        <p>Lorem ipsum</p>
+    <hr class="thin-div"/>
+
+    <div id="projects" class="project-sect">
+        <h2 class="project-title">Projects</h2>
+        <p class="project-txt"> 
+            A showcase of my work related to programming and various projects completed during 
+            university courses. Some projects are reflective of my interests, whilst others are
+            meant to extend my current capabilities and problem-solving abilities.
+
+            
+            For my <a href="https://www.behance.net/aar0nramos" style="font-style: oblique;">
+            graphic design portfolio</a>, click <a href="https://www.behance.net/aar0nramos" 
+            style="font-style: oblique;">here</a>.
+        </p>
+        <!-- <div>tiny containers for each job??</div> -->
+        <form action="https://aar0m.github.io/portfolio/projects.html">
+            <button type="submit" class="project-button">See more projects →</button>
+        </form>
     </div>
 
     <div id="contact">

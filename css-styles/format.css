@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    z-index: 999;
 }
 
 .logo {
@@ -15,13 +16,22 @@
 }
 
 .logo:hover {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bolder;
+}
+
+.last-nav {
+    padding-right: 40px;
+
+    @media (width <= 400px) {
+        padding-right: 20px;
+    }
 }
 
 li {
     list-style: none;
     display: inline-block;
+    position: relative;
 }
 
 li a{
@@ -29,29 +39,68 @@ li a{
     font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25vw);
     color:white;
     background-attachment: fixed;
-    margin-left: 24px;
-    margin-right: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    display: block;
+    text-align: center;
 
-    @media (width < 960px) {
-        margin-left: 2px;
-        margin-right: 2px;
-        padding-right: 5px;
+    @media (width <= 960px) {
+        padding-left: 1px;
+        padding-right: 6px;
     }
 }
 
 li a:hover {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    @media (width <= 960px) {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    @media (width <= 400px) {
+        font-weight: bold;
+        font-size: 0.9rem;
+    }
+}
+
+ul.dropdown li{
+    display: block;
+}
+
+ul.dropdown li a{
+    margin-left: -60px;
+    padding: 10px 15px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25vw);
+    background-color: rgb(7, 7, 10);
+
+    @media (width <= 400px) {
+        padding: 10px 5px 15px;
+        font-size: 0.8rem;
+        margin-left: -58px;
+    }
+}
+
+ul.dropdown li.top-link a{
+    padding-top: 25px;
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 700;
+    display: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ul li:hover .dropdown {
+    display: block;
+}
+
+
+ul li:hover .dropdown a:hover{
     font-weight: bolder;
-
-    @media (width < 960px) {
-        font-weight: bolder;
-        font-size: 1rem;
-    }
-
-    @media (width < 400px) {
-        font-weight: 300;
-        font-size: 1rem;
-    }
 }
 
 /*//////////////// HERO PAGE ///////////////////////*/
@@ -100,17 +149,37 @@ h1.subtitle {
     background-color: whitesmoke;
 }
 
-h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 100;
-    font-size: calc(36px + 1.5vw); 
-    margin-bottom: calc(24px - 1.25vw);
-    padding-left: calc(12px + 2vw);
+@keyframes appear-slide{
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes appear-fade{
+    from {
+        opacity: 0;
+        scale: 0.5;
+        filter: blur(2.5px);
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 a:link {
     text-decoration: none;
     color:  whitesmoke;
+}
+
+p a:hover {
+    font-style: italic;
+    text-decoration: underline;
 }
 
 a:visited {
@@ -121,24 +190,46 @@ a:visited {
 body {
     margin: 0;
     padding: 0;
-    border: 0;
     width: 100%;
     height: 100%;
     background-color: rgb(7, 7, 10);
     color: whitesmoke;
 }
 
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-size: calc(36px + 1.5vw); 
+    margin-bottom: calc(24px - 1.25vw);
+    padding-left: 11%;
+    font-style: italic;
+
+    @media (width <= 960px) {
+        padding-left: calc(12px + 2vw);
+        padding-right: calc(24px + 2vw);
+    }
+}
+
 p {
     font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25vw);
     font-family: Arial, Helvetica, sans-serif;
     display: flow-root;
+    line-height: 130%;
     padding-right: 10%;
-    padding-left: 3%;
+    padding-left: 11%;
 
-    @media (width < 960px) {
+    @media (width <= 960px) {
         padding-left: calc(12px + 2vw);
         padding-right: calc(24px + 2vw);
     }
+}
+
+.thin-div {
+    background: whitesmoke;
+    width: 55%;
+    margin-right: 50%;
+    margin-left: 11%;
+    margin-top: 3%
 }
 
 /*//////////////// IMAGES SECTION ///////////////////////*/
@@ -150,6 +241,9 @@ p {
     padding-top: 24px;
     padding-left: 9.5%;
     padding-right: 2.5%;
+    animation: appear-fade linear;
+    animation-timeline: view();
+    animation-range: entry cover 30%;
     
     @media (width <= 1440px) {
         max-width: 45%;
@@ -157,7 +251,7 @@ p {
         padding-top: calc(24px + 5%);
     }
 
-    @media (width < 960px) {
+    @media (width <= 960px) {
         max-width: 100%;
         margin-left: 0;
         padding-left: 0;
@@ -165,25 +259,127 @@ p {
     }
 }
 
-
 /*//////////////// ABOUT SECTION ///////////////////////*/
 .about-sect {
     color: rgb(7, 7, 10);
-    padding-top: 24px;
+    margin-top: -12px;
+    padding-top: 12px;
     padding-bottom: 3vw;
     text-align: left;
     background-color: whitesmoke;
+    vertical-align: middle;
 }
 
-p.about-text {
+.abt-title {
+    padding-left: calc(12px + 2vw);
+    animation: appear-slide linear;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+}
+
+p.about-txt {
     font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25vw);
     font-family: Arial, Helvetica, sans-serif;
     display: flow-root;
     padding-right: 10%;
     padding-left: 0;
+    animation: appear-slide linear;
+    animation-timeline: view();
+    animation-range: entry cover 22.5%;
 
-    @media (width < 960px) {
+    @media (width <= 960px) {
         padding-left: calc(12px + 2vw);
         padding-right: calc(24px + 2vw);
     }
+}
+
+/*//////////////// EXPERIENCE SECTION ///////////////////////*/
+.exp-sect {
+    padding-top: 2.5%;
+    padding-bottom: 3vw;
+}
+
+.exp-txt {
+    padding-bottom: 1.5%;
+}
+
+.exp-radio {
+    display: flex;
+    width: 7.5%;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: left;
+    padding-left: 11%;
+
+    @media (width <= 960px) {
+        padding-left: calc(12px + 2vw);
+        padding-right: calc(24px + 2vw);
+    }
+}
+
+.exp-button {
+    border: 2px solid whitesmoke;
+    margin: 10px;
+    margin-bottom: 20px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exp-button input {
+    display: none;
+}
+
+.exp-button .checkmarked {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.exp-button input:checked + .checkmarked {
+    opacity: 1;
+}
+
+label {
+    position: relative;
+    margin-top: 14px;
+    float: right;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1.3rem, 0.95rem + 0.25vw, 1.3vw);
+}
+
+
+/*//////////////// PROJECTS SECTION ///////////////////////*/
+.project-sect {
+    padding-top: 1.5%;
+}
+
+.project-button {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.8rem, 0.95rem + 0.25vw, 1.3vw);
+    text-align: center;
+    text-decoration: none;
+    float: right;
+    padding: 20px;
+    margin-right: 10%;
+    background-color: rgb(7, 7, 10);
+    color: whitesmoke;
+    border: solid 2.5px;
+    border-color: whitesmoke;
+    border-radius: 9px;
+}
+
+.project-button:hover {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    background-color: whitesmoke;
+    color: rgb(7, 7, 10);
+    cursor: pointer;
 }
