@@ -165,13 +165,7 @@ h1.subtitle {
     padding-bottom: calc(100px + 6vw);
 }
 
-
-/*//////////////// BODY SECTION ///////////////////////*/
-.divide-bar {
-    padding: calc(12px + 1vw);
-    background-color: whitesmoke;
-}
-
+/*//////////////// KEYFRAMES! SECTION ///////////////////////*/
 @keyframes appear-slide{
     from {
         opacity: 0;
@@ -204,6 +198,42 @@ h1.subtitle {
         opacity: 1;
         scale: 1;
     }
+}
+
+@keyframes loading {
+    0%   { width: 0% }
+    10%  { width: 20% }
+    25%  { width: 25% }
+    35%  { width: 45% }
+    50%  { width: 55% }
+    60%  { width: 75% }
+    75%  { width: 80% }
+    85%  { width: 90% }
+    100% { width: 100% }
+}
+
+@keyframes lineLoad {
+    from {
+        width: 0;
+    }
+    to {
+        width: 75%;
+    }
+}
+
+@keyframes colorLoad {
+    from {
+        color:rgb(17, 17, 17);
+    }
+    to {
+        color: whitesmoke;
+    }
+}
+
+/*//////////////// BODY SECTION ///////////////////////*/
+.divide-bar {
+    padding: calc(12px + 1vw);
+    background-color: whitesmoke;
 }
 
 a:link {
@@ -263,7 +293,8 @@ p {
     width: 55%;
     margin-right: 50%;
     margin-left: 11%;
-    margin-top: 3%
+    margin-top: 3%;
+    animation: none;
 }
 
 /*//////////////// IMAGES SECTION ///////////////////////*/
@@ -572,7 +603,7 @@ input[type='radio']:checked + .checkmarked + label {
     background-color: rgb(17, 17, 17);
     animation: appear-slideUp 0.8s linear;
     animation-timeline: view();
-    animation-range: entry cover 25%;
+    animation-range: entry cover 17%;
 
     @media (width <= 960px) {
         margin-left: 1.5%;
@@ -585,6 +616,9 @@ input[type='radio']:checked + .checkmarked + label {
     margin-left: 5%;
     padding-top: calc(6px + 3%);
     margin-bottom: calc(-12px - 0.25%);
+    animation: colorLoad 0.7s ease;
+    animation-timeline: view();
+    animation-range: entry cover 25%;
 }
 
 .exp-subsect:last-child {
@@ -597,16 +631,20 @@ input[type='radio']:checked + .checkmarked + label {
     margin-bottom: -6px;
     font-size: calc(12px + 0.25vw); 
     font-family: Arial, Helvetica, sans-serif;
+    animation: colorLoad 0.7s ease;
+    animation-timeline: view();
+    animation-range: entry cover 25%;
 }
 
 .exp-list li {
-    text-decoration: double;
     font-family: 'Courier New', Courier, monospace;
     padding-right: calc(12px + 3%);
-    display: inline-block;
     padding-bottom: 8px;
     line-height: normal;
+    display: flex;
+    overflow: hidden;
     margin-left: 1%;
+    animation: loading 0.4s;
 }
 
 .exp-list li:last-child{
@@ -615,10 +653,11 @@ input[type='radio']:checked + .checkmarked + label {
 }
 
 hr {
-    width:75%;
+    width: 75%;
     margin-left: 5%;
     margin-top: 15px;
     border: 2px dotted;
+    animation: lineLoad 0.5s steps(40);
 }
 
 /*//////////////// PROJECTS SECTION ///////////////////////*/
