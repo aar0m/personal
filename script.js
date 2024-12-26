@@ -9,10 +9,8 @@ function swapDiv(ele) {
 
     otherYearLabels.forEach(yearLabel => {
         document.getElementById(yearLabel.id).style.fontWeight = '100';
-        document.getElementById(yearLabel.id).classList.toggle("label");
     });
 
-    document.getElementById("L".concat(ele.id)).classList.toggle("label");
     document.getElementById("L".concat(ele.id)).style.fontWeight = 'bold';
     document.getElementById("Y".concat(ele.id)).checked = true;
     document.getElementById("T".concat(ele.id)).style.animation = 'appear-slideUp 0.6s';

@@ -499,10 +499,19 @@ p.about-txt {
 }
 
 .exp-button:hover {
-    cursor: pointer;
+    border: 2px solid rgb(204, 204, 209);
 }
 
-.exp-button input:checked+.checkmarked {
+.exp-button:hover .checkmarked {
+    opacity: 50%;
+}
+
+.exp-button:hover + label {
+    font-weight: bold;
+    color: rgb(211, 211, 212);
+} 
+
+.exp-button input:checked + .checkmarked {
     opacity: 1;
 }
 
@@ -523,11 +532,29 @@ label {
 }
 
 label:hover {
-    cursor: pointer;
     font-weight: bold;
+    color: rgb(211, 211, 212);
 }
 
-input[type='radio']:checked+.checkmarked+label {
+.buttonwrap:hover {
+    cursor: pointer;
+}
+
+.buttonwrap:hover .exp-button{
+    border: 2px solid rgb(204, 204, 209);
+    cursor: pointer;
+}
+
+.buttonwrap:hover .checkmarked {
+    opacity: 50%;
+}
+
+.buttonwrap:hover .year-label {
+    color: rgb(211, 211, 212);
+    cursor: pointer;
+}
+
+input[type='radio']:checked + .checkmarked + label {
     font-weight: bold;
 }
 
