@@ -4,6 +4,7 @@
 
 <head>
 <title>Aaron Ramos - Portfolio</title>
+<script src="script.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -70,12 +71,22 @@
     <div id="experience" class="exp-sect">
         <h2 class="exp-title">Experience</h2>
         <p class="exp-desc">
-            Highlights of my life and my work experience over the years—both voluntary and paid positions.
+            A comprehensive overview of my life and my work experience over the years—both voluntary and paid positions.
+
+            For a conventional resumé, please visit my <a href="https://www.linkedin.com/in/aaron-ramos-61569424a/" style="font-style: oblique;">
+                LinkedIn</a>.
         </p>
         <div class="exp-content">
             <div class="exp-radio">
+                <!--
+                <div class="buttonwrap" onclick="swapDiv(this);" id="2025">
+                    <label class="exp-button"><input type="radio" id="Y2025" name="year" value="2025" checked><span class="checkmarked"></span></label>
+                    <label class="year-label" id="L2025" for="2025">2025</label>
+                </div>
+                -->
+
                 <div class="buttonwrap" onclick="swapDiv(this);" id="2024">
-                    <label class="exp-button"><input type="radio" id="Y2024" name="year" value="2024"><span class="checkmarked"></span></label>
+                    <label class="exp-button"><input type="radio" id="Y2024" name="year" value="2024" checked><span class="checkmarked"></span></label>
                     <label class="year-label" id="L2024" for="2024">2024</label>
                 </div>
 
@@ -93,31 +104,188 @@
                     <label class="exp-button"><input type="radio" id="Y2021" name="year" value="2021"><span class="checkmarked"></span></label>
                     <label class="year-label" id="L2021" for="2021">2021</label>
                 </div>
+
+                <div class="yrNav-container">
+                    <button onclick="swapRight()" class="yrNav-btn"> < </button>
+                    <button onclick="swapLeft()" class="yrNav-btn"> > </button>
+                 </div>
             </div>
 
             <div class="exp-txt-container">
+                <!--
+                <div class="exp-txt" id="T2025">
+    
+                    <h3>2025</h3>
+                
+                    <div class="exp-subsect">
+                        <h3> 
+                            Job Title
+                        </h3>
+                        <p>Place, Date</p>
+                        <hr>
+                        <ul class="exp-list">
+                            <li>* </li>
+                            <li>* </li>
+                            <li>* </li>
+                        </ul>
+                    </div>
+                </div> 
+                -->
+
                 <div class="exp-txt" id="T2024">
                     <h3>2024</h3>
-                    <p>TEST TEXT AHSJKDHASJD</p>
+                    <div class="exp-subsect">
+                        <h3> 
+                            Research Project Assistant
+                        </h3>
+                        <p>Aug 2024 — Present // University of Hawaii at Manoa, Professor Hanqing Guo</p>
+                        <hr>
+                        <ul class="exp-list">
+                            <li>* Conduct experiments testing physical distortions against AI watermarks.</li>
+                            <li>* Evaluate data to determine effects of signal-level, physical, and AI-induced distortions.</li>
+                            <li>* Help write, edit, and proofread sections of a multi-page research paper discussing AI watermark robustness.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-subsect">
+                        <h3> 
+                            ECE Grader
+                        </h3>
+                        <p>Aug 2024 — Dec 2024 // University of Hawaii at Manoa, College of Engineering</p>
+                        <hr>
+                        <ul class="exp-list">
+                            <li>* Attentively grade and record homework and exam submissions from students taking ECE361 (Digital Systems & Comp. Design) and ECE342 (Probability and Statistics).</li>
+                            <li>* Resolve student concerns about submission problems or grade issues.</li>
+                            <li>* Ensure fair and reasonable grades based on a display of course understanding.</li>
+                            <li>* Consult with professors regarding grading scales and reporting any academic dishonesty.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-subsect">
+                        <h3> 
+                            Auronia Web Designer & Consultant
+                        </h3>
+                        <p>Feb 2023 — June 2023 // Personal Project</p>
+                        <hr>
+                        <ul class="exp-list">
+                            <li>* Create graphics and website assets for the Auronia skincare brand.</li>
+                            <li>* Develop a cohesive brand identity by applying typesets, color palettes, and content.</li>
+                            <li>* Design product displays, example graphics, and store assets used on a website.</li>
+                            <li>* Discuss how to effectively advertise products by implementing products into graphics.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-subsect">
+                        <h3> 
+                            Onzuka Strength Graphic Designer
+                        </h3>
+                        <p>May 2023 — Present // Personal Project</p>
+                        <hr>
+                        <ul class="exp-list">
+                            <li>* Issue multiple iterations to convey a coaching/training brand.</li>
+                            <li>* Work with client to create graphical packages and assets for branding purposes.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="exp-txt" id="T2023">
-                    2023
+                    <h3>2023</h3>
+                    <div class="exp-subsect">
+                        <h3> 
+                            UH Esports Web Designer
+                        </h3>
+                        <p>Jan 2023 — Feb 2023 // University of Hawaii at Manoa, UH Esports</p>
+                        <hr>
+                        <ul class="exp-list">
+                            <li>* Designed 1 concept page to visualize a home screen for the UH Esports website.</li>
+                            <li>* Created 3 wireframes for a 'Location' page, ideating the best page contents and orders for possible users.</li>
+                            <li>* Collaborate with peers and effectively present designs to supervisors in design meetings.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-subsect">
+                        <h3> 
+                            Digital Illustrator
+                        </h3>
+                        <p>Jan 2023 — Present // Personal Project</p>
+                        <hr>
+                        <ul class="exp-list">
+                            <li>* Use Adobe Photoshop to practice sketching, lineart, and creating artwork.</li>
+                            <li>* Practice various artstyles by using different brushes.</li>
+                            <li>* Learn color theory, anatomy, and digital rendering techniques.</li>
+                            <li>* Create social media posts and short-form content exhibiting completed art.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="exp-txt" id="T2022">
-                    2022
+                    <h3>2022</h3>
+                    <div class="exp-subsect">
+                        <h3> 
+                            UH Esports Graphic Designer
+                        </h3>
+                        <p>Aug 2021 — Oct 2022 // University of Hawaii at Manoa, UH Esports </p>
+                        <hr>
+                        <ul class="exp-list">
+                            <li>* Designed 35+ informative yet engaging graphics across UH Esports social media platforms (Instagram, X (formerly Twitter), Discord etc.).</li>
+                            <li>* Developed a basic spreadsheet system to document designers and posters of various graphics.</li>
+                            <li>* Design and release graphics promptly relating to live events or recent outcomes.</li>
+                            <li>* Communicate with supervisors, team leads, and peers effectively and professionally to create/edit graphics based on feedback.</li>
+                        </ul>
+                    </div>
+
+                    <div class="exp-subsect">
+                        <h3> 
+                            Summer Intern
+                        </h3>
+                        <p>Jul 2022 — Jul 2022 // Activision Blizzard, UH Esports</p>
+                        <hr>
+                        <ul class="exp-list">
+                            <li>* Produced 3 graphics communicating the collaboration between UH Esports and the Overwatch League for holding the ‘Midseason Madness’ tournament and other related events (posted on Instagram).</li>
+                            <li>* Worked in teams to efficiently coordinate/assist professional esports players within designated areas.</li>
+                            <li>* Installed computer hardware and software for professional gaming purposes.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="exp-txt" id="T2021">
-                    2021
+                    <h3>2021</h3>
+                    <div class="exp-subsect">
+                        <h3> 
+                            Computer Engineering Student
+                        </h3>
+                        <p>Aug 2021 — Present // University of Hawaii at Manoa, College of Engineering</p>
+                        <hr>
+                        <ul class="exp-list">
+                            <li>* Complete courses and review learning material based in computer engineering.</li>
+                            <li>* Participate and contribute to research projects.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            <script src="script.js"></script>
             </div>
         </div>
     </div>
+
+<!-- Job, Year, Desc Template 
+<div class="exp-txt" id="T2022">
+    
+    <h3>2022</h3>
+
+    <div class="exp-subsect">
+        <h3> 
+            Job Title
+        </h3>
+        <p>Place, Date</p>
+        <hr>
+        <ul class="exp-list">
+            <li>* </li>
+            <li>* </li>
+            <li>* </li>
+        </ul>
+    </div>
+
+</div>
+-->
 
     <hr class="thin-div"/>
 
@@ -127,7 +295,6 @@
             A showcase of my work related to programming and various projects completed during 
             university courses. Some projects are reflective of my interests, whilst others are
             meant to extend my current capabilities and problem-solving abilities.
-
             
             For my <a href="https://www.behance.net/aar0nramos" style="font-style: oblique;">
             graphic design portfolio</a>, click <a href="https://www.behance.net/aar0nramos" 

@@ -1,3 +1,21 @@
+::-webkit-scrollbar {
+    width: 10px;
+    z-index: 700;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(17, 17, 17);
+    border-radius: 10px;
+    z-index: 700;
+  }
+
+
+::-webkit-scrollbar-thumb {
+    background: rgb(29, 29, 29);
+    border-radius: 10px;
+    z-index: 700;
+}
+
 /*//////////////// NAV BAR ///////////////////////*/
 .navdiv {
     background-color: rgb(7, 7, 10);
@@ -106,13 +124,17 @@ ul li:hover .dropdown a:hover{
 
 /*//////////////// HERO PAGE ///////////////////////*/
 .hero-sect {
-    background-image: url('../images/hero-back.png');
+    background-image: url('../images/hero-back.jpg');
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+
+    @media (width <= 1350px) {
+        background-image: url('../images/hero-back-mobile.jpg');
+    }
 }
 
 h1 {
@@ -308,7 +330,7 @@ p.about-txt {
 /*//////////////// EXPERIENCE SECTION ///////////////////////*/
 .exp-sect {
     padding-top: 2.5%;
-    padding-bottom: 3vw;
+    padding-bottom: 0.75vw;
 }
 
 .exp-title {
@@ -327,6 +349,10 @@ p.about-txt {
 .exp-content {
     display: flex;
     padding-bottom: 0.5%;
+    
+    @media (width <= 650px) {
+        flex-direction: column;
+    }
 }
 
 .exp-radio {
@@ -335,19 +361,29 @@ p.about-txt {
     flex-wrap: wrap;
     justify-content: left;
     align-items: left;
+    padding-top: 5%;
+    padding-bottom: 2.5%;
     padding-left: 14%;
-    overflow-y: visible;
+    margin-right: 1%;
 
     @media (width <= 960px) {
-        padding-left: calc(12px + 2vw);
-        padding-right: calc(24px + 2vw);
+        padding-left: calc(36px + 2vw);
+        padding-right: calc(12px + 2vw);
         width: 20%;
     }
 
-    @media (width <= 400px) {
-        padding-left: calc(12px + 2vw);
-        padding-right: calc(24px + 2vw);
-        width: 80%;
+    @media (width <= 650px) {
+        width: 100%;
+        display: inline-block;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        margin-left: -15px;
+    }
+
+    @media (width <= 450px) {
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -356,9 +392,8 @@ p.about-txt {
     margin: 10px;
     margin-right: 15px;
     margin-left: 15px;
-    margin-bottom: 20px;
-    width: clamp(5px, 25px, 30px);
-    height: clamp(5px, 25px, 30px);
+    width: clamp(2px, 25px, 30px);
+    height: clamp(2px, 25px, 30px);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -366,6 +401,23 @@ p.about-txt {
     animation: appear-slide linear;
     animation-timeline: view();
     animation-range: entry cover 30%;
+
+    @media (width <= 450px) {
+        margin: 0;
+        padding: 0;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+
+    @media (width <= 405px) {
+        width: 15px;
+        height: 15px;
+        margin: 0;
+        margin-top: 18px;
+        margin-right: 22px;
+        padding: 0;
+        border: 1px solid whitesmoke;
+    }
 }
 
 .exp-button input {
@@ -380,6 +432,10 @@ p.about-txt {
     display: inline-block;
     opacity: 0;
     transition: opacity 0.2s ease;
+}
+
+.exp-button .checkmarked:hover {
+    opacity: 50%;
 }
 
 .exp-button:hover {
@@ -399,6 +455,11 @@ label {
     animation: appear-slide linear;
     animation-timeline: view();
     animation-range: entry cover 30%;
+
+    @media (width <= 450px) {
+        margin-right: 2px;
+        margin-bottom:0;
+    }
 }
 
 label:hover {
@@ -410,30 +471,154 @@ input[type='radio']:checked + .checkmarked + label {
     font-weight: bold;
 }
 
-.exp-txt-container {
-    width: 50%;
-    height: 300px;
-    padding-right: 15%;
-    margin-left: 0.5%;
-    margin-top: -0.5%;
+.buttonwrap {
+    margin-bottom: -25%;
+
+    @media (width <= 450px) {
+        margin: 0px;
+        padding: 0px;
+        display: block;
+    }
+}
+
+.yrNav-container {
+    margin-left: -5%;
+    padding-top: 15%;
+    margin-bottom: -5%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(0.8rem, 0.95rem + 0.25vw, 1.3vw);
+    text-align: left;
+    text-decoration: none;
+
+    @media (width <= 840px) {
+        margin-left: 36px;
+        padding: 0px;
+    }
+
+    @media (width <= 650px) {
+        width: 100%;
+        display: inline-block;
+        text-align: right;
+        padding: 0px;
+        margin: 0;
+        margin-bottom: -90px;
+        padding-top: 15px;
+        padding-bottom: 90px;
+    }
+
+    @media (width <= 500px) {
+        margin: 0px;
+        padding: 15px 0px;
+    }
+}
+
+.yrNav-btn {
+    font-size: large;
+    font-weight: 200;
+    padding: 3px 18px;
+    padding-bottom: 3.5px;
+    background-color: rgb(7, 7, 10);
     color: whitesmoke;
-    border-radius: 10px;
+    border: solid 2.5px;
+    border-color: whitesmoke;
+    border-radius: 9px;
+}
+
+.yrNav-btn:hover {
+    background-color: whitesmoke;
+    color: rgb(7, 7, 10);
+    cursor: pointer;
+}
+
+.exp-txt {
+    display: block;
+}
+
+.exp-txt-container {
+    width: 75%;
+    float: right;
+    height: 500px;
+    margin-right: 15%;
+    margin-left: 0.5%;
+    color: whitesmoke;
     overflow-y: scroll;
-    background-color: rgb(17, 17, 17);
-    animation: appear-slideUp;
+    animation: appear-slideUp linear 1.2s;
     animation-timeline: view();
-    animation-range: entry cover 40%;
+    animation-range: entry cover 30%;
 
     @media (width <= 960px) {
-        width: 70%;
-        padding-right: 10%;
+        width: 100%;
+        margin-left: 1.5%;
+        margin-right: 10%;
+        padding-top: 24px;
+    }
+}
+
+.exp-txt h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: calc(36px + 1.5vw); 
+    margin-bottom: 1.5%;
+    margin-top: -10px;
+}
+
+.exp-subsect {
+    width: 98%;
+    height: auto;
+    margin-left: 0.5%;
+    margin-top: calc(24px + 0.5%);
+    color: whitesmoke;
+    border-radius: 10px;
+    background-color: rgb(17, 17, 17);
+    animation: appear-slideUp 0.8s linear;
+    animation-timeline: view();
+    animation-range: entry cover 25%;
+
+    @media (width <= 960px) {
         margin-left: 1.5%;
         margin-right: 10%;
     }
 }
 
-.exp-txt {
-    display: block;
+.exp-subsect h3 {
+    font-size: calc(24px + 0.5vw); 
+    margin-left: 5%;
+    padding-top: calc(6px + 3%);
+    margin-bottom: calc(-12px - 0.25%);
+}
+
+.exp-subsect:last-child {
+    margin-bottom: 5%;
+}
+
+.exp-subsect p{
+    padding: 0px;
+    margin-left: 5%;
+    margin-bottom: -6px;
+    font-size: calc(12px + 0.25vw); 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.exp-list li {
+    text-decoration: double;
+    font-family: 'Courier New', Courier, monospace;
+    padding-right: calc(12px + 3%);
+    display: inline-block;
+    padding-bottom: 8px;
+    line-height: normal;
+    margin-left: 1%;
+}
+
+.exp-list li:last-child{
+    text-decoration: double;
+    padding-bottom: calc(12px + 3%);
+}
+
+hr {
+    width:75%;
+    margin-left: 5%;
+    margin-top: 15px;
+    border: 2px dotted;
 }
 
 /*//////////////// PROJECTS SECTION ///////////////////////*/
