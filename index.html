@@ -74,37 +74,42 @@
         </p>
         <div class="exp-content">
             <div class="exp-radio">
-                <label class="exp-button"><input type="radio" name="year" value="2024" 
-                onclick="swapDiv(3)"><span class="checkmarked"></span></label>
-                <label for="2024">2024</label>
+                <div class="buttonwrap" onclick="swapDiv(this);" id="2024">
+                    <label class="exp-button"><input type="radio" id="Y2024" name="year" value="2024"><span class="checkmarked"></span></label>
+                    <label class="year-label" id="L2024" for="2024">2024</label>
+                </div>
 
-                <label class="exp-button"><input type="radio" name="year" value="2023"
-                onclick="swapDiv(2)"><span class="checkmarked"></span></label>
-                <label for="2023">2023</label>
+                <div class="buttonwrap" onclick="swapDiv(this);" id="2023">
+                    <label class="exp-button"><input type="radio" id="Y2023" name="year" value="2023"><span class="checkmarked"></span></label>
+                    <label class="year-label" id="L2023" for="2023">2023</label>
+                </div>
 
-                <label class="exp-button"><input type="radio" name="year" value="2022"
-                onclick="swapDiv(1)"><span class="checkmarked"></span></label>
-                <label for="2022">2022</label>
+                <div class="buttonwrap" onclick="swapDiv(this);" id="2022">
+                    <label class="exp-button"><input type="radio" id="Y2022" name="year" value="2022"><span class="checkmarked"></span></label>
+                    <label class="year-label" id="L2022" for="2022">2022</label>
+                </div>
 
-                <label class="exp-button"><input type="radio" name="year" value="2021"
-                onclick="swapDiv(0)"><span class="checkmarked"></span></label>
-                <label for="2021">2021</label>
+                <div class="buttonwrap" onclick="swapDiv(this);" id="2021">
+                    <label class="exp-button"><input type="radio" id="Y2021" name="year" value="2021"><span class="checkmarked"></span></label>
+                    <label class="year-label" id="L2021" for="2021">2021</label>
+                </div>
             </div>
 
             <div class="exp-txt-container">
-                <div class="exp-txt" id="2024">
-                    2024
+                <div class="exp-txt" id="T2024">
+                    <h3>2024</h3>
+                    <p>TEST TEXT AHSJKDHASJD</p>
                 </div>
 
-                <div class="exp-txt" id="2023">
+                <div class="exp-txt" id="T2023">
                     2023
                 </div>
 
-                <div class="exp-txt" id="2022">
+                <div class="exp-txt" id="T2022">
                     2022
                 </div>
 
-                <div class="exp-txt" id="2021">
+                <div class="exp-txt" id="T2021">
                     2021
                 </div>
             </div>

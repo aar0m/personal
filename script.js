@@ -1,39 +1,20 @@
-function swapDiv(val) {
-    switch(val) {
-        default: 
-        document.getElementById('2023').style.display='none';
-        document.getElementById('2022').style.display='none';
-        document.getElementById('2021').style.display='none';
-        document.getElementById('2024').style.display='none';
-        break;
+function swapDiv(ele) {
+    // replace y2024 with find element window.alert(document.getElementById('Y2024').parentElement.parentElement.id);
 
-        case 3: 
-        document.getElementById('2023').style.display='none';
-        document.getElementById('2022').style.display='none';
-        document.getElementById('2021').style.display='none';
-        document.getElementById('2024').style.display='block';
-        break;
+    const otherYears = document.querySelectorAll(".exp-txt");
 
-        case 2: 
-        document.getElementById('2024').style.display='none';
-        document.getElementById('2023').style.display='block';
-        document.getElementById('2022').style.display='none';
-        document.getElementById('2021').style.display='none';
-        break;
+    otherYears.forEach(year => {
+        document.getElementById(year.id).style.display = 'none';
+    });
 
-        case 1: 
-        document.getElementById('2024').style.display='none';
-        document.getElementById('2023').style.display='none';
-        document.getElementById('2022').style.display='block';
-        document.getElementById('2021').style.display='none';
-        break;
-        
-        case 0: 
-        document.getElementById('2024').style.display='none';
-        document.getElementById('2023').style.display='none';
-        document.getElementById('2022').style.display='none';
-        document.getElementById('2021').style.display='block';
-        break;
-    }
+    const otherYearLabels = document.querySelectorAll(".year-label");
 
+    otherYearLabels.forEach(yearLabel => {
+        document.getElementById(yearLabel.id).style.fontWeight = '100';
+    });
+
+    document.getElementById("L".concat(ele.id)).style.fontWeight = 'bold';
+    document.getElementById("Y".concat(ele.id)).checked = true;
+    document.getElementById("T".concat(ele.id)).style.animation = 'appear-slideUp 0.6s';
+    document.getElementById("T".concat(ele.id)).style.display = 'block';
 }
