@@ -68,7 +68,7 @@ li a {
 }
 
 li a:hover {
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 1.1rem + 0.25vw, 1.25vw);
     font-weight: bold;
 
     @media (width <=960px) {
@@ -281,7 +281,7 @@ h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 100;
     font-size: calc(2.25rem + 1.5vw);
-    margin-bottom: calc(24px - 1.25vw);
+    margin-bottom: 24px;
     padding-left: 11%;
     font-style: italic;
 
@@ -324,7 +324,7 @@ p {
     padding-top: 24px;
     padding-left: 9.5%;
     padding-right: 2.5%;
-    animation: appear-fade linear;
+    animation: appear-fade ease-in;
     animation-timeline: view();
     animation-range: entry cover 30%;
 
@@ -364,6 +364,7 @@ p {
     animation: appear-slideRight linear;
     animation-timeline: view();
     animation-range: entry cover 40%;
+    margin-bottom: 0;
 }
 
 p.about-txt {
@@ -453,7 +454,7 @@ p.about-txt {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: appear-slideRight linear;
+    animation: appear-slideRight ease-in;
     animation-timeline: view();
     animation-range: entry cover 30%;
 
@@ -790,21 +791,30 @@ hr {
     margin-left: 0;
     margin-right: 0;
     padding: 0;
+    margin-bottom: 1rem;
     text-align: center;
+    animation: appear-slideUp ease-in;
+    animation-timeline: view();
+    animation-range: entry cover 30%;
 }
 
 .contact-sect p {
     width: 100%;
     margin: 0;
     padding: 0;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
     padding-bottom: calc(1.5% + 1.5vw);
-    padding-top: 1%;
     text-align: center;
+    animation: appear-slideUp ease-in;
+    animation-timeline: view();
+    animation-range: entry cover 30%;
 }
 
 .cntct-subsect {
     display: flex;
     padding-bottom: 3vw;
+    justify-content: center;
 
     @media (width <= 750px) {
         flex-direction: column;
@@ -817,6 +827,7 @@ hr {
     border: solid 2px rgb(7, 7, 10);
     border-radius: 20px;
     margin-left: 5%;
+    margin-right: 2.5%;
     width: 45%;
     height: 800px;
     display: flex;
@@ -920,5 +931,69 @@ hr {
 }
 
 .cntct-content {
-    width: 40%;
+    border-radius: 20px;
+    margin-left: 2.5%;
+    margin-right: 5%;
+    width: 45%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+
+    @media (width <= 750px) {
+        width: 90%;
+        justify-content: center;
+        padding-top: 2.5%;
+    }
+}
+
+.id-card {
+    color: rgb(7, 7, 10);
+    background-color: rgb(202, 202, 206);
+    border: solid 2px rgb(202, 202, 206);
+    border-radius: 20px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    white-space: pre-line;
+    animation: appear-fade linear;
+    animation-timeline: view();
+    animation-range: entry cover 40%;
+
+    @media (width <= 750px) {
+        width: 90%;
+        justify-content: center;
+        padding-top: 2.5%;
+    }
+}
+
+.socials {
+    color: whitesmoke;
+    background-color: rgb(7, 7, 10);
+    border: solid 2px rgb(7, 7, 10);
+    border-radius: 20px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5%;
+    justify-content: center;
+    animation: appear-fade linear;
+    animation-timeline: view();
+    animation-range: entry cover 10%;
+
+    @media (width <= 750px) {
+        width: 90%;
+        justify-content: center;
+        padding-top: 2.5%;
+    }
+}
+
+footer p{
+    float: right;
+    margin: 0;
+    padding: 0;
+    padding: 1% 1.5% 1%;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(201, 200, 200);
 }
