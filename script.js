@@ -49,3 +49,7 @@ function swapLeft() {
 
     swapDiv(leftNode);
 }
+
+function fixFontColor(ele) {
+    document.getElementById(ele.id).style.color = 'whitesmoke';
+}

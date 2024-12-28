@@ -32,16 +32,17 @@
     <h1 class="subtitle"> Personal Portfolio | <a href="mailto:ramosaaron2@gmail.com">ramosaaron2@gmail.com</a></h1>
 </div>
 
+<div class="divide-bar" id="about"></div>
 <div class="divide-bar"></div>
 
 <body>
     <div class="abt-container">
         <picture>
-        <img class="korea-trip" src='images/pseudo-head_wide.JPG' 
+        <img class="abt-pic" src='images/pseudo-head_wide.JPG' 
                 alt="A picture of me!">
         </picture>
                 
-        <div id="about" class="about-sect">
+        <div class="about-sect">
             <h2 class="abt-title">About Me</h2>
             <p class="about-txt"> Welcome to my portfolio! I'm privileged enough to be a creative 
                 <span style="font-weight: bolder;">and</span> a computer engineering 
@@ -71,6 +72,7 @@
     </div>
 
     <div class="divide-bar"></div>
+    <div class="divide-bar"></div>
 
     <div id="experience" class="exp-sect">
         <h2 class="exp-title">Experience</h2>
@@ -81,6 +83,7 @@
             please visit my <a href="https://www.linkedin.com/in/aaron-ramos-61569424a/" style="font-style: oblique;">
                 LinkedIn</a>.
         </p>
+
         <div class="exp-content">
             <div class="exp-radio">
                 <!--
@@ -295,8 +298,8 @@
     <hr class="thin-div"/>
 
     <div id="projects" class="project-sect">
-        <h2 class="project-title">Projects</h2>
-        <p class="project-txt"> 
+        <h2>Projects</h2>
+        <p> 
             A showcase of my work related to programming and various projects completed during 
             university courses. Some projects are reflective of my interests, whilst others are
             meant to extend my current capabilities and problem-solving skills.
@@ -311,9 +314,54 @@
         </form>
     </div>
 
-    <div id="contact">
+    <div class="divide-bar" style="background-color: rgb(7, 7, 10);"></div>
+
+    <div id="contact" class="contact-sect">
         <h2>Contact</h2>
-        <p>Lorem ipsum</p>
+        <p>
+            Something something description about contact. Here is a form + social media
+        </p>
+
+        <div class="cntct-subsect">
+            <div class="cntct-form">
+                <form>
+                    <label for="name">// Name</label>
+                    <br>
+                    <input type="text" id="name" name="name" value="Your name here" onfocus="this.value=''" onchange="fixFontColor(this)">
+                    <br>
+
+                    <label for="email">// Email</label>
+                    <br>
+                    <input type="email" id="email" name="email" value="Your email here" onfocus="this.value=''" onchange="fixFontColor(this)">
+                    <br>
+
+                    <label for="linkedFrom">How did you get to this website? ---</label>
+                    <br>
+                    <select id="linkedFrom" name="linkedFrom">
+                        <option value="github">GitHub</option>
+                        <option value="linkedIn">LinkedIn</option>
+                        <option value="behance">Behance</option>
+                        <option value="socialMed">Social Media</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <br>
+
+                    <label for="message">-- Message --</label>
+                    <br>
+                    <textarea type="text" id="message" name="message" onfocus="this.value=''" onchange="fixFontColor(this)">Your message here</textarea>
+                    <br>
+
+                    <input type="submit" value="Submit">
+                    <label>--------------</label>
+                </form>
+            </div>
+            
+            <div class="cntct-content">
+                <p>
+                    THERE IS GOING TO BE A FORM HERE TOO
+                </p>
+            </div>
+        </div>
     </div>
 
 </body>
