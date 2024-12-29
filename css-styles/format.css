@@ -931,35 +931,17 @@ hr {
 }
 
 .cntct-content {
-    border-radius: 20px;
+    color: whitesmoke;
+    background-color: whitesmoke;
     margin-left: 2.5%;
     margin-right: 5%;
     width: 45%;
     height: 800px;
     display: flex;
     flex-direction: column;
-
-    @media (width <= 750px) {
-        width: 90%;
-        justify-content: center;
-        padding-top: 2.5%;
-    }
-}
-
-.id-card {
-    color: rgb(7, 7, 10);
-    background-color: rgb(202, 202, 206);
-    border: solid 2px rgb(202, 202, 206);
-    border-radius: 20px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%;
-    white-space: pre-line;
     animation: appear-fade linear;
     animation-timeline: view();
-    animation-range: entry cover 40%;
+    animation-range: entry cover 25%;
 
     @media (width <= 750px) {
         width: 90%;
@@ -970,24 +952,45 @@ hr {
 
 .socials {
     color: whitesmoke;
-    background-color: rgb(7, 7, 10);
-    border: solid 2px rgb(7, 7, 10);
-    border-radius: 20px;
-    height: 350px;
     display: flex;
+    width: 90%;
+    margin: auto;
+    margin-top: 1%;
     flex-direction: column;
-    margin-top: 2.5%;
     justify-content: center;
-    animation: appear-fade linear;
-    animation-timeline: view();
-    animation-range: entry cover 10%;
 
     @media (width <= 750px) {
         width: 90%;
         justify-content: center;
         padding-top: 2.5%;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
+
+.socials .project-button {
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid 2px rgb(7, 7, 10);
+    color: rgb(7, 7, 10);
+    background-color: whitesmoke;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 2.5%;
+    font-weight: bold;
+    animation: appear-fade linear;
+    animation-timeline: view();
+    animation-range: entry cover 25%;
+}
+
+
+.discord:hover {
+    background-color: rgb(114,137,218);
+    border: solid 2px rgb(58, 48, 119);
+    color: whitesmoke;
+}
+
+/*//////////////// FOOTER ///////////////////////*/
 
 footer p{
     float: right;
