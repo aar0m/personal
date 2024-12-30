@@ -954,6 +954,7 @@ hr {
     animation: appear-slideUp ease-in;
     animation-timeline: view();
     animation-range: entry cover 25%;
+    float: inline-end;
 
     @media (width <= 750px) {
         width: 90%;
