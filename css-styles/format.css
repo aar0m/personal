@@ -844,7 +844,7 @@ hr {
     height: 800px;
     display: flex;
     flex-direction: column;
-    animation: appear-fade linear;
+    animation: appear-slideRight linear;
     animation-timeline: view();
     animation-range: entry cover 25%;
 
