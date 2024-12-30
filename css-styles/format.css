@@ -980,6 +980,9 @@ hr {
     text-align: center;
     margin: 0;
     padding: 0;
+    animation: appear-slideUp ease-in;
+    animation-timeline: view();
+    animation-range: entry cover 10%;
 }
 
 .cntct-content p:last-of-type {
