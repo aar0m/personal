@@ -602,7 +602,7 @@ input[type='radio']:checked + .checkmarked + label {
 .buttonwrap {
     margin-bottom: -25%;
 
-    @media (width <=450px) {
+    @media (width <=470px) {
         margin: 0px;
         padding: 0px;
         display: block;
@@ -702,11 +702,12 @@ input[type='radio']:checked + .checkmarked + label {
     font-size: calc(2.25rem + 1.5vw);
     margin-bottom: 1.5%;
     margin-top: -10px;
+}
 
-    @media (width <=960px) {
-        padding-left: calc(12px + 2vw);
-        padding-right: calc(24px + 2vw);
-    }
+.exp-subhead {
+    padding-left: calc(12px + 2vw);
+    padding-right: calc(24px + 2vw);
+    margin-bottom: 0;
 }
 
 .exp-subsect {
