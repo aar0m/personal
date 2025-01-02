@@ -705,9 +705,17 @@ input[type='radio']:checked + .checkmarked + label {
 }
 
 .exp-subhead {
-    padding-left: calc(12px + 2vw);
-    padding-right: calc(24px + 2vw);
-    margin-bottom: 0;
+    margin-bottom: calc(-12px - 0.25%);
+    animation: colorLoad 0.7s ease;
+    animation-timeline: view();
+    animation-range: entry cover 25%;
+
+    @media (width <= 650px) {
+        padding-left: calc(12px + 2vw);
+        padding-right: calc(24px + 2vw);
+        margin-bottom: 0;
+        margin-top: 24px + 0.25%;
+    }
 }
 
 .exp-subsect {
@@ -780,7 +788,7 @@ hr {
 /*//////////////// PROJECTS SECTION ///////////////////////*/
 .project-sect {
     padding-top: 1.5%;
-    padding-bottom: 4vw;
+    padding-bottom: 3vw;
 }
 
 .project-sect h2{
@@ -789,11 +797,109 @@ hr {
     animation-range: entry cover 40%;
 }
 
-.project-sect p{
+.project-sect p {
     animation: appear-slideUp linear;
     animation-timeline: view();
     animation-range: entry cover 30%;
-    padding-bottom: 5%;
+    padding-bottom: 1.5%;
+}
+
+.pr-subsect {
+    width: 78%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    justify-content: space-between;
+    margin-bottom: 1.5%;
+    height: 400px;
+
+    @media (width <= 1800px) {
+        overflow-y: hidden;
+    }
+
+    @media (width <= 500px) {
+        width: 375px;
+        height: 500px;
+        justify-content: center;
+        margin-left: 2.5%;
+    }
+}
+
+.pr-box {
+    background-color: rgb(7, 7, 10);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 400px;
+    width: 350px;
+    border: 3px solid whitesmoke;
+    border-radius: 10px;
+    color: whitesmoke;
+    animation: appear-slideUp 0.8s ease;
+    animation-timeline: view();
+    animation-range: entry cover 35%;
+
+    @media (width <= 500px) {
+        width: 300px;
+        height: 500px;
+    }
+}
+
+.pr-box:hover {
+    background-color: whitesmoke;
+    color: rgb(7, 7, 10);
+    cursor: pointer;
+}
+
+.pr-box:hover p {
+    font-weight: bold;
+}
+
+.pr-box:hover .wtracker{
+    filter:invert(1);
+}
+
+.pr-box hr {
+    margin-left: 2.5%;
+    margin-bottom: 1%;
+}
+
+.pr-box img {
+    width: 250px;
+    padding-left: 12%;
+    margin-bottom: -3.5%;
+
+    @media (width <= 500px) {
+        width: 275px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.pr-box h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: calc(24px + 0.25vw);
+    margin: 0;
+    padding: 0;
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    animation: appear-slideUp 0.5s ease;
+    animation-timeline: view();
+    animation-range: entry cover 25%;
+}
+
+.pr-box p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: clamp(1rem, 0.95rem + 0.1vw, 1.25vw);
+    line-height: normal;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-top: 1.5%;
+    margin-left: 2.5%;
+    animation: appear-slideUp 0.5s ease;
+    animation-timeline: view();
+    animation-range: entry cover 25%;
 }
 
 .project-button {
@@ -804,6 +910,8 @@ hr {
     float: right;
     padding: 20px;
     margin-right: 10%;
+    margin-top: 2.5%;
+    margin-right: 11%;
     background-color: rgb(7, 7, 10);
     color: whitesmoke;
     border: solid 2.5px whitesmoke;
@@ -1069,7 +1177,7 @@ hr {
 
 /*//////////////// FOOTER ///////////////////////*/
 
-footer p{
+footer p {
     float: right;
     margin: 0;
     padding: 0;
