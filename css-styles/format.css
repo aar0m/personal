@@ -330,11 +330,11 @@ p {
 }
 
 .contact-pic {
+    width: 36.5%;
     margin: 0;
     padding: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 3%;
     float: left;
     height: auto;
     animation: appear-fade ease-in;
