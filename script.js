@@ -53,3 +53,20 @@ function swapLeft() {
 function fixFontColor(ele) {
     document.getElementById(ele.id).style.color = 'whitesmoke';
 }
+
+function clickDropdown() {
+    document.getElementById("dropdown-contents").classList.toggle("show");
+}
+
+getElementById("dropdown").onclick = function(event) {
+  if (!event.target.matches('.dropdown')) {
+    var dropdowns = document.getElementsByClassName("dropped");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
